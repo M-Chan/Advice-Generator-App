@@ -8,17 +8,18 @@ let advice;
 let randomButton = document.querySelector("#diceBox");
 
 
-function generateAdvice() {
+async function generateAdvice() {
     // fetch API...
-    fetch("https://api.adviceslip.com/advice")
+    return await fetch("https://api.adviceslip.com/advice")
 
     .then((response)=>{
         return response.json();
     })
 
     .then((data)=>{
-    console.log(data); // displays one set of data in the console
+    // console.log(data); // displays one set of data in the console
 
+    if(data.slip.id != adviceNo){
     adviceNo = data.slip.id;
     console.log("id = ", adviceNo)
     adviceNoHolder.innerText = adviceNo;
@@ -26,6 +27,8 @@ function generateAdvice() {
     advice = data.slip.advice;
     console.log("advice = ", advice)
     adviceHolder.innerText = "\"" + advice + "\"";
+    }
+    else{generateAdvice();}
     })
 
     .catch(err => console.log(err));
