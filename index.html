@@ -13,12 +13,13 @@
 
   <title>Frontend Mentor | Advice generator app</title>
 
+  <noscript>JavaScript disabled</noscript>
 </head>
 <body>
   <div class="screen">
     <div class="adviceContainer">
-      <div class="adviceNo">Advice #<!-- Advice ID goes here --></div>      
-      <div class="advice">"<!-- Advice text goes here -->"</div>
+      <div class="adviceNo">Advice #<div id="adviceID"><!-- Advice ID goes here --></div></div>      
+      <div class="advice"><div id="quote"></div></div>
 
       <div id="separator"></div>
       <div class="diceBox"><div id="dice"></div></div>
@@ -30,5 +31,7 @@
       Coded by <a href="https://github.com/M-Chan">Man Ting Chan</a>.
     </div>
   </div>
+
+  <script src="../app/app.js"></script>
 </body>
 </html>

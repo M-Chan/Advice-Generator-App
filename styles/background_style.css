@@ -16,6 +16,8 @@
     align-items: center;
 }
 
+#adviceID{display: inline-block;}
+
 @media only screen and (min-width: 400px) {
     .attribution {
         position: absolute;
