@@ -5,6 +5,9 @@ let adviceHolder = document.getElementById("quote");
 let adviceNo;
 let advice;
 
+let randomButton = document.querySelector("#diceBox");
+
+
 function generateAdvice() {
     // fetch API...
     fetch("https://api.adviceslip.com/advice")
@@ -30,3 +33,4 @@ function generateAdvice() {
 
 generateAdvice();
 
+randomButton.addEventListener('click', () => {generateAdvice();})

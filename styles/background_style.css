@@ -60,7 +60,7 @@
         background-repeat: no-repeat;
     }
 
-    .diceBox{
+    #diceBox{
         grid-row: 4;
         justify-self: center;
         justify-items: center;
@@ -71,7 +71,7 @@
         background-color: hsl(150, 100%, 66%);
     }
 
-    .diceBox:hover{
+    #diceBox:hover{
         cursor: pointer;
         box-shadow: 0.1vh 0.1vh 4vh 0.75vh hsl(150, 100%, 66%);
     }
