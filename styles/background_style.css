@@ -17,6 +17,8 @@
 }
 
 #adviceID{display: inline-block;}
+.adviceNo, #adviceID{color: hsl(150, 100%, 66%)}
+.advice, #quote{color: hsl(193, 38%, 86%)}
 
 @media only screen and (min-width: 400px) {
     .attribution {
