@@ -13,6 +13,7 @@ async function generateAdvice() {
     return await fetch("https://api.adviceslip.com/advice")
 
     .then((response)=>{
+        if(response.ok){console.log("Response Successful")}
         return response.json();
     })
 
@@ -31,7 +32,7 @@ async function generateAdvice() {
     else{generateAdvice();}
     })
 
-    .catch(err => console.log(err));
+    .catch(err => console.log("error"));
 }
 
 generateAdvice();
