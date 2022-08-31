@@ -1,6 +1,9 @@
 *{
     padding: 0;
     margin: 0;
+
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
 }
 
 .attribution {color: hsl(0, 0%, 100%); text-align: center;}
@@ -28,25 +31,30 @@
     }
 
     .adviceContainer{
-        width: 38vw;
+        width: 36vw;
         height: 40vh;
         border-radius: 2.5vh;
         background-color: hsl(217, 19%, 24%);
 
         display: grid;
-        grid-template-columns: auto;
+        grid-template-columns: 2vw auto 2vw;
         grid-template-rows: 12vh 12vh 13vh 3vh;
         text-align: center;
     }
 
     .adviceNo, .advice, #separator{align-self: center;}
+    .adviceNo, #separator, #diceBox{grid-column: 1 / 4;}
 
     .adviceNo{
         grid-row: 1;
+        text-transform: uppercase;
     }
 
     .advice{
+        grid-column: 2;
         grid-row: 2;
+
+        font-size: 3.9vh;
     }
 
     #separator{
@@ -86,5 +94,10 @@
         background-size: 40%;
         background-position: center;
         background-repeat: no-repeat;
+    }
+
+    .adviceNo, #adviceID{
+        font-size: 2vh;
+        letter-spacing: 0.25vw;
     }
 }
