@@ -22,6 +22,8 @@ async function generateAdvice() {
     .then((data)=>{
     // console.log(data); // displays one set of data in the console
 
+    console.log(data.slip)
+
     if(data.slip.id != adviceNo){ // prevents the same advice being shown immediately after 
     adviceNo = data.slip.id;
     console.log("id = ", adviceNo)
@@ -31,7 +33,9 @@ async function generateAdvice() {
     console.log("advice = ", advice)
     adviceHolder.innerText = "\"" + advice + "\"";
     }
-    else{generateAdvice();}
+    else{
+        await delay(2000);
+        generateAdvice();}
     })
 
     .catch(err => console.log("error"));
