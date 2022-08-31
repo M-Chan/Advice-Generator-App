@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 - Solution URL: [Solution]()
-- Live Site URL: [Advice Generator App]()
+- Live Site URL: [Advice Generator App](https://m-chan.github.io/Advice-Generator-App/)
 
 &nbsp;
 ## My process
@@ -50,24 +50,27 @@ Users should be able to:
 &nbsp;
 ### What I learned
 - HTML
--- Don't forget the following!!!
+  - Don't forget the following!!!
   ```html
   <noscript>JavaScript disabled</noscript>
   ```
 
 &nbsp; <!-- non-breaking space ASCII character; adds a line -->
 - CSS
--- To create the glow effect for the dice upon hover, I used a box shadow...
+  - To create the glow effect for the dice upon hover, I used a box shadow...
   ```css
   #diceBox:hover{box-shadow: 0.1vh 0.1vh 4vh 0.75vh hsl(150, 100%, 66%);}
   ```
-  -- I also learnt that you can 'justify-self' and 'align-self' for individual 'child' elements
+  - I also learnt that you can 'justify-self' and 'align-self' for individual 'child' elements
 
 &nbsp;
 - JS
--- I learnt to use an API!
+  - I learnt to use an API! ('no-cache' was **vital** for randomisation otherwise the browser would cache the response and lead to the same advice being generated again and again
   ```js
-  return await fetch("https://api.adviceslip.com/advice")
+  return await fetch("https://api.adviceslip.com/advice", {
+        method: 'GET',
+        cache: "no-cache"
+    })
   ```
 
 
