@@ -6,7 +6,11 @@
     font-weight: 800;
 }
 
-.attribution {color: hsl(0, 0%, 100%); text-align: center;}
+.attribution {
+    position: absolute;
+    bottom: 3vh;
+    color: hsl(0, 0%, 100%); text-align: center;
+}
 .attribution a {color: hsl(228, 45%, 44%);}
 
 .screen{
@@ -22,79 +26,85 @@
 .adviceNo, #adviceID{color: hsl(150, 100%, 66%)}
 .advice, #quote{color: hsl(193, 38%, 86%)}
 
+.adviceContainer{
+    border-radius: 2.5vh;
+    background-color: hsl(217, 19%, 24%);
+
+    position: absolute;
+
+    display: grid;
+    text-align: center;
+}
+
+.adviceNo, .advice, #separator{align-self: center;}
+.adviceNo, #separator, #diceBox{grid-column: 1 / 4;}
+
+.adviceNo{
+    grid-row: 1;
+    text-transform: uppercase;
+}
+
+.advice{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#separator{
+    grid-row: 3;
+    justify-self: center;
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#diceBox{
+    grid-row: 4;
+    justify-self: center;
+    justify-items: center;
+    align-items: center;
+    width: 7.5vh;
+    height: 7.5vh;
+    border-radius: 50%;
+    background-color: hsl(150, 100%, 66%);
+}
+
+#dice{
+    width: 100%;
+    height: 100%;
+
+    background-image: url("../assets/icon-dice.svg");
+    background-size: 40%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
 @media only screen and (min-width: 400px) { /* for desktop */
-    .attribution {
-        position: absolute;
-        bottom: 3vh;
-        font-size: 3vh;
-    }
+    .attribution {font-size: 3vh;}
 
     .screen{align-items: center;}
 
     .adviceContainer{
         width: 36vw;
         height: 40vh;
-        border-radius: 2.5vh;
-        background-color: hsl(217, 19%, 24%);
 
-        display: grid;
         grid-template-columns: 2vw auto 2vw;
         grid-template-rows: 12vh 12vh 13vh 3vh;
-        text-align: center;
     }
 
-    .adviceNo, .advice, #separator{align-self: center;}
-    .adviceNo, #separator, #diceBox{grid-column: 1 / 4;}
-
-    .adviceNo{
-        grid-row: 1;
-        text-transform: uppercase;
-    }
-
-    .advice{
-        grid-column: 2;
-        grid-row: 2;
-
-        font-size: 3.9vh;
-    }
+    .advice{font-size: 3.9vh;}
 
     #separator{
-        grid-row: 3;
-        justify-self: center;
-
         width: 84%;
         height: 16vh;
 
         background-image: url("../assets/pattern-divider-desktop.svg");
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-
-    #diceBox{
-        grid-row: 4;
-        justify-self: center;
-        justify-items: center;
-        align-items: center;
-        width: 7.5vh;
-        height: 7.5vh;
-        border-radius: 50%;
-        background-color: hsl(150, 100%, 66%);
     }
 
     #diceBox:hover{
         cursor: pointer;
         box-shadow: 0.1vh 0.1vh 4vh 0.75vh hsl(150, 100%, 66%);
-    }
-
-    #dice{
-        width: 100%;
-        height: 100%;
-
-        background-image: url("../assets/icon-dice.svg");
-        background-size: 40%;
-        background-position: center;
-        background-repeat: no-repeat;
     }
 
     .adviceNo, #adviceID{
@@ -104,74 +114,25 @@
 }
 
 @media only screen and (max-width: 400px) { /* for phone */
-    .attribution {
-        position: absolute;
-        bottom: 3vh;
-        font-size: 3vw;
-    }
+    .attribution {font-size: 3vw;}
 
     .adviceContainer{
         width: 91vw;
         height: 47vh;
-        border-radius: 2.5vh;
-        background-color: hsl(217, 19%, 24%);
 
-        position: absolute;
         top: 18vh;
 
-        display: grid;
         grid-template-columns: 7.5vw auto 7.5vw;
         grid-template-rows: 13vh 17.6vh 11.5vh 4.9vh;
-        text-align: center;
     }
 
-    .adviceNo, .advice, #separator{align-self: center;}
-    .adviceNo, #separator, #diceBox{grid-column: 1 / 4;}
-
-    .adviceNo{
-        grid-row: 1;
-        text-transform: uppercase;
-    }
-
-    .advice{
-        grid-column: 2;
-        grid-row: 2;
-
-        font-size: 6vw;
-    }
+    .advice{font-size: 6vw;}
 
     #separator{
-        grid-row: 3;
-        justify-self: center;
-
         width: 84%;
         height: 16vh;
 
         background-image: url("../assets/pattern-divider-mobile.svg");
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-
-    #diceBox{
-        grid-row: 4;
-        justify-self: center;
-        justify-items: center;
-        align-items: center;
-        width: 7.5vh;
-        height: 7.5vh;
-        border-radius: 50%;
-        background-color: hsl(150, 100%, 66%);
-    }
-
-    #dice{
-        width: 100%;
-        height: 100%;
-
-        background-image: url("../assets/icon-dice.svg");
-        background-size: 40%;
-        background-position: center;
-        background-repeat: no-repeat;
     }
 
     .adviceNo, #adviceID{
