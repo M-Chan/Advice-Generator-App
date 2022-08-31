@@ -33,9 +33,7 @@ async function generateAdvice() {
     console.log("advice = ", advice)
     adviceHolder.innerText = "\"" + advice + "\"";
     }
-    else{
-        await delay(2000);
-        generateAdvice();}
+    else{generateAdvice();}
     })
 
     .catch(err => console.log("error"));
