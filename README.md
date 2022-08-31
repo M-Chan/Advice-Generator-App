@@ -32,7 +32,7 @@ Users should be able to:
 
 
 ### Links
-- Solution URL: [Solution]()
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/advice-generator-using-api-vanilla-js-euE6SBLldg)
 - Live Site URL: [Advice Generator App](https://m-chan.github.io/Advice-Generator-App/)
 
 &nbsp;
