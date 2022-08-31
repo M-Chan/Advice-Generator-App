@@ -19,7 +19,7 @@ async function generateAdvice() {
     .then((data)=>{
     // console.log(data); // displays one set of data in the console
 
-    if(data.slip.id != adviceNo){
+    if(data.slip.id != adviceNo){ // prevents the same advice being shown immediately after 
     adviceNo = data.slip.id;
     console.log("id = ", adviceNo)
     adviceNoHolder.innerText = adviceNo;
