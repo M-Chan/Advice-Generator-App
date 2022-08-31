@@ -11,7 +11,8 @@ let randomButton = document.querySelector("#diceBox");
 async function generateAdvice() {
     // fetch API...
     return await fetch("https://api.adviceslip.com/advice", {
-        method: 'GET'
+        method: 'GET',
+        cache: "no-cache"
     })
 
     .then((response)=>{
